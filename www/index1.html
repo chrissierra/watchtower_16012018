@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fullscreen Video</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./src/css/estilos_login.css">
+        <script src="./src/js/ingreso.js"></script>
+          <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    </head>
+    <body>
+
+    <div class="fullscreen-bg">
+        <video loop muted autoplay poster="./imagenes/Snapshots/Carmela.jpg" class="fullscreen-bg__video">
+            <source src="./imagenes/MP4/Carmela.mp4" type="video/mp4">
+        
+        </video>
+    </div>
+
+    <div class="content">
+        <h1>WatchTower</h1>
+
+        <form id="form" class="topBefore">
+		
+		  <input id="nombre" type="text" placeholder="Nombre">
+		  <input id="rut" type="number" placeholder="RUT">
+	
+  <input id="submit" type="submit" value="GO!">
+  
+</form>
+       
+    </div>
+
+    </body>
+</html>

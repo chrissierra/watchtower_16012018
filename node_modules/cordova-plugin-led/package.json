@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-led",
+        "scope": null,
+        "escapedName": "cordova-plugin-led",
+        "name": "cordova-plugin-led",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "C:\\Users\\Chris\\Desktop\\watchtower\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-led@latest",
+  "_id": "cordova-plugin-led@1.0.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-led",
+  "_nodeVersion": "0.12.1",
+  "_npmUser": {
+    "name": "timwindsor",
+    "email": "twindsor@blackberry.com"
+  },
+  "_npmVersion": "2.5.1",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-led",
+    "scope": null,
+    "escapedName": "cordova-plugin-led",
+    "name": "cordova-plugin-led",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-led/-/cordova-plugin-led-1.0.1.tgz",
+  "_shasum": "f7f24617981fa6ff22e5ff8c8ccd2bb4c7f37b85",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-led",
+  "_where": "C:\\Users\\Chris\\Desktop\\watchtower\\node_modules",
+  "author": {
+    "name": "Andy Wu and Deric Chen"
+  },
+  "bugs": {
+    "url": "https://github.com/blackberry/WebWorks-Community-APIs/issues"
+  },
+  "cordova": {
+    "id": "cordova-plugin-led",
+    "platforms": [
+      "blackberry10"
+    ]
+  },
+  "dependencies": {},
+  "description": "BlackBerry 10 Community Contributed API to flash the LED with RGB colors",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "f7f24617981fa6ff22e5ff8c8ccd2bb4c7f37b85",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-led/-/cordova-plugin-led-1.0.1.tgz"
+  },
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0"
+    }
+  ],
+  "homepage": "https://github.com/blackberry/WebWorks-Community-APIs/tree/master/BB10-Cordova/LED#readme",
+  "keywords": [
+    "blackberry",
+    "LED",
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-blackberry10"
+  ],
+  "license": "Apache 2.0",
+  "maintainers": [
+    {
+      "name": "timwindsor",
+      "email": "twindsor@blackberry.com"
+    }
+  ],
+  "name": "cordova-plugin-led",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackberry/WebWorks-Community-APIs.git"
+  },
+  "scripts": {},
+  "version": "1.0.1"
+}

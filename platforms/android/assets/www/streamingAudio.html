@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <title>Wombat Coffee Roasters</title>
+  
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+  <style>
+    :root {
+      box-sizing: border-box;
+      font-size: calc(1vw + 0.6em);
+    }
+
+    @media (min-width: 50em) {
+      :root {
+        font-size: 1.125em;
+      }
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poiret One';
+
+    }
+
+    /*
+     * Links
+     */
+    a:link {
+      color: #1476b8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #1430b8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:active {
+      color: #b81414;
+    }
+
+    /*
+     * Header section
+     */
+    .page-header {
+      padding: 0.4em 1em;
+      background-color: #fff;
+    }
+
+    @media (min-width: 35em) {
+      .page-header {
+        padding: 1em;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .page-header {
+        padding: 1em 4em;
+      }
+    }
+
+    .title > h1 {
+      color: #333;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      margin: .2em 0;
+    }
+
+    @media (min-width: 35em) {
+      .title > h1 {
+        font-size: 2.25rem;
+      }
+    }
+
+    .slogan {
+      color: #888;
+      font-size: 0.875em;
+      margin: 0;
+    }
+
+    /*
+     * Hero image
+     */
+     /*
+    .hero {
+      padding: 2em 1em;
+      text-align: center;
+      background-image: url(coffee-beans-small.jpg);
+      background-size: 100%;
+      color: #fff;
+      text-shadow: 0.1em 0.1em 0.3em #000;
+    }
+
+    @media (min-width: 35em) {
+      .hero {
+        padding: 5em 3em;
+        font-size: 1.2rem;
+        background-image: url(coffee-beans-medium.jpg);
+      }
+    }
+
+    @media (min-width: 50em) {
+      .hero {
+        padding: 7em 6em;
+        background-image: url(coffee-beans.jpg);
+      }
+    }
+*/
+    /*
+     * Main section
+     */
+    main {
+      padding: 1em;
+    }
+
+    @media (min-width: 35em) {
+      main {
+        padding: 2em 1em;
+      }
+    }
+
+    @media (min-width: 50em) {
+      main {
+        padding: 2em 4em;
+      }
+    }
+
+    .subtitle {
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+    }
+
+    /*
+     * Menu
+     */
+    .menu {
+      position: relative;
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: -1.2em;
+      right: 0.1em;
+      border: 0;
+      background-color: transparent;
+      font-size: 3em;
+      width: 1em;
+      height: 1em;
+      line-height: 0.4;
+      text-indent: 5em;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .menu-toggle::after {
+      position: absolute;
+      top: 0.2em;
+      left: 0.2em;
+      display: block;
+      content: "\2261";
+      text-indent: 0;
+    }
+
+    .menu-dropdown {
+      display: none;
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0;
+    }
+
+    .menu.is-open .menu-dropdown {
+      display: block;
+    }
+
+    @media (min-width: 35em) {
+      .menu-toggle {
+        display: none;
+      }
+
+      .menu-dropdown {
+        display: block;
+      }
+    }
+
+    .menu.is-open .menu-dropdown {
+      display: block;
+    }
+
+    /**
+     * Nav menu
+     */
+    .nav-menu {
+      margin: 0;
+      padding-left: 0;
+      border: 1px solid #ccc;
+      list-style: none;
+      background-color: #000;
+      color: #fff;
+    }
+
+    .nav-menu > li + li {
+      border-top: 1px solid #ccc;
+    }
+
+    .nav-menu > li > a {
+      display: block;
+      padding: 0.8em 1em;
+      color: #fff;
+      font-weight: normal;
+    }
+
+    @media (min-width: 35em) {
+      .nav-menu {
+        display: flex;
+        position: static;
+        border: 0;
+        padding: 0 1em;
+      }
+
+      .nav-menu > li {
+        flex: 1;
+      }
+      .nav-menu > li + li {
+        border: 0;
+      }
+
+      .nav-menu > li > a {
+        padding: 0.3em;
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 50em) {
+      .nav-menu {
+        padding: 0 4em;
+      }
+    }
+
+    /**
+     * Main columns
+     */
+    @media (min-width: 35em) {
+     .row {
+       display: flex;
+       margin-left: -.75em;
+       margin-right: -.75em;
+      }
+
+      .column {
+        flex: 1;
+        margin-right: 0.75em;
+        margin-left: 0.75em;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header id="header" class="page-header">
+    <div class="title">
+      <h1>WatchTower</h1>
+      <div class="slogan">Electronics for Home</div>
+    </div>
+  </header>
+
+  <nav class="menu" id="main-menu">
+    <button class="menu-toggle" id="toggle-menu">
+      toggle menu
+    </button>
+    <div class="menu-dropdown">
+      <ul class="nav-menu">
+        <li><a href="./index.html">Index</a></li>
+        <li><a href="./alarmas.html">Alarmas</a></li>
+        <li><a href="./streamingAudio.html">Audio</a></li>
+      <li><a href="./rebooting.html">Reinicia tu equipo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main id="main">
+      <h3>Audio</h3>
+
+      <iframe src="http://christophersierrame.ddns.net/cams/picture/2/frame/" frameborder="0"></iframe>
+ <!--<iframe src="https://nubilous-dingo-5717.dataplicity.io/audio/" frameborder="0"></iframe>-->
+
+      <audio controls id="audio">
+       <source src="http://christophersierrame.ddns.net/audio/">
+       <!-- <source src="horse.mp3" type="audio/mpeg">-->
+      Your browser does not support the audio element.
+      </audio>
+
+      <div>
+        <button class="btn btn-danger" onclick="comenzar_streaming_audio()">Comenzar Streaming</button>
+      </div>
+
+
+
+      <button id="encender" class="btn btn-danger" onClick="encendiendoAlarma()">Enciende tu alarma</button>
+      <br>
+      <br>
+      <button id="apagar" class="btn btn-success" onClick="apagandoAlarma()">Apaga tu alarma </button>
+
+
+
+  </main>
+
+  <script type="text/javascript">
+
+
+function comenzar_streaming_audio(){
+  alert("asdf")
+  fetch('http://christophersierrame.ddns.net/vlc_php.php', {mode: 'no-cors'}).then(function(response){
+   // alert(response.text());
+    return response.text()
+  }).then(function(r){
+  //  alert("adsafd");
+  })
+location.reload();
+  
+}
+
+
+document.addEventListener("backbutton", onBackKeyDown, false);
+
+function onBackKeyDown() {
+//tgerminar streaming audio
+fetch('http://christophersierrame.ddns.net/finalizar_audio_streaming.php').then(function(response) {
+  return response.text();
+}).then(function(myBlob) {
+  console.log(miBlob)
+});
+   
+  
+
+
+
+  // Handle the back button
+}
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+   //alert("asdfadsfasfdONDEVICEREADYUUYY")
+ var encender= document.getElementById("encender");
+ var apagar= document.getElementById("apagar");
+
+ encender.addEventListener("click", function encendiendoAlarma() {
+//alert("asdfadfencenderr?!?!?")
+
+
+
+
+    fetch('http://christophersierrame.ddns.net/alarmaon.php').then(function(response) {
+  return response.text();
+}).then(function(myBlob) {
+  console.log(miBlob);
+  navigator.notification.vibrate(2500);
+});
+
+ }, false);
+
+ apagar.addEventListener("click", function  apagandoAlarma(){
+//alert("apagar?!!?")
+    fetch('http://christophersierrame.ddns.net/alarmaoff.php').then(function(response) {
+  return response.text();
+}).then(function(myBlob) {
+  console.log(miBlob)
+});
+
+ }, false)
+
+
+
+
+
+}
+
+
+    (function () {
+      var menuButton = document.getElementById('toggle-menu');
+      menuButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        var menu = document.getElementById('main-menu');
+        menu.classList.toggle('is-open');
+      });
+    })();
+  </script>
+
+</body>
+<script type="text/javascript" src="cordova.js"></script>
+</html>

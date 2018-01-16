@@ -1,0 +1,58 @@
+http {
+ upstream nubilous-dingo-5717.dataplicity {
+ server  https://nubilous-dingo-5717.dataplicity.io/;
+ 
+ }
+
+
+
+
+server {
+ listen 88;
+ root /usr/share/nginx/html;
+server_name https://nubilous-dingo-5717.dataplicity.io/;
+server_name 192.168.0.2;
+ index index.php;
+
+
+ location ~\.php$ {
+fastcgi_param HTTPS on;
+proxy_pass https://nubilous-dingo-5717.dataplicity.io/;
+  include fastcgi_params;
+    # With php5-fpm:
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+
+ }
+}
+
+}
+
+
+
+
+
+
+
+
+
+server {
+ listen 88;
+ root /usr/share/nginx/html;
+server_name https://nubilous-dingo-5717.dataplicity.io/;
+server_name 192.168.0.2;
+ index index.php;
+
+
+ location ~\.php$ {
+fastcgi_param HTTPS on;
+
+  include fastcgi_params;
+    # With php5-fpm:
+    fastcgi_pass unix:/var/run/php5-fpm.sock;
+    fastcgi_index index.php;
+    fastcgi_param  SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+
+ }
+}
