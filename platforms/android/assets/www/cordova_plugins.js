@@ -533,6 +533,14 @@ module.exports = [
         "clobbers": [
             "community.led"
         ]
+    },
+    {
+        "id": "onesignal-cordova-plugin.OneSignal",
+        "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+        "pluginId": "onesignal-cordova-plugin",
+        "clobbers": [
+            "OneSignal"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -560,7 +568,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.5",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-push": "1.10.5",
-    "cordova-plugin-led": "1.0.1"
+    "cordova-plugin-led": "1.0.1",
+    "onesignal-cordova-plugin": "2.2.5"
 };
 // BOTTOM OF METADATA
 });

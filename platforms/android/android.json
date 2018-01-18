@@ -91,6 +91,10 @@
                         {
                             "xml": "<feature name=\"PushNotification\"><param name=\"android-package\" value=\"com.adobe.phonegap.push.PushPlugin\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -179,6 +183,18 @@
                         {
                             "xml": "<permission android:name=\"${applicationId}.permission.PushHandlerActivity\" android:protectionLevel=\"signature\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<permission android:name=\"com.phonegap.helloworld.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"com.phonegap.helloworld.permission.RECEIVE_ADM_MESSAGE\" />",
+                            "count": 1
                         }
                     ],
                     "/manifest/application": [
@@ -204,6 +220,18 @@
                         },
                         {
                             "xml": "<service android:exported=\"false\" android:name=\"com.adobe.phonegap.push.RegistrationIntentService\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"com.phonegap.helloworld\" /></intent-filter></receiver>",
                             "count": 1
                         }
                     ]
@@ -290,6 +318,9 @@
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
         "cordova-plugin-led": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "onesignal-cordova-plugin": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },
@@ -828,6 +859,14 @@
             "clobbers": [
                 "community.led"
             ]
+        },
+        {
+            "id": "onesignal-cordova-plugin.OneSignal",
+            "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+            "pluginId": "onesignal-cordova-plugin",
+            "clobbers": [
+                "OneSignal"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -853,6 +892,7 @@
         "cordova-plugin-vibration": "2.1.5",
         "cordova-plugin-whitelist": "1.2.2",
         "phonegap-plugin-push": "1.10.5",
-        "cordova-plugin-led": "1.0.1"
+        "cordova-plugin-led": "1.0.1",
+        "onesignal-cordova-plugin": "2.2.5"
     }
 }

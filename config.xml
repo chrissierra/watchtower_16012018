@@ -8,19 +8,6 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
- 
- <gap:plugin name="onesignal-cordova-plugin" spec="^2.1.1" source="npm" />
-
-<!-- Requires cli-6.4.0 but we recommend using the latest version. -->
-<preference name="phonegap-version" value="cli-7.0.1" />
-
-<preference name="android-build-tool" value="gradle" />
-<preference name="android-minSdkVersion" value="15" />
-
-<!-- Can omit if not targetting Windows Phone -->
-<preference name="windows-appx-target" value="8.1-phone" />
-<preference name="WindowsToastCapable" value="true" />
- 
     <preference name="DisallowOverscroll" value="true" />
     <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="android-minSdkVersion" value="14" />
@@ -135,4 +122,5 @@
         <variable name="SENDER_ID" value="85075801930" />
     </plugin>
     <plugin name="cordova-plugin-file-transfer" spec="~1.5.0" />
+    <plugin name="onesignal-cordova-plugin" spec="~2.2.5" />
 </widget>
